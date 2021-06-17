@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Homepage"
+
+
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CoFilms"
+        android:textSize="30sp"
+        android:id="@+id/coFilms"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+        />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignRight="@+id/coFilms"
+        android:layout_marginTop="10dp"
+        android:tooltipText="search"
+        android:contextClickable="true"
+
+
+
+        android:layout_marginRight="10dp"
+
+
+        android:background="@drawable/searchbox" />
+
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="379dp"
+        android:layout_height="264dp"
+        android:layout_below="@id/searchView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+
+
+        app:srcCompat="@color/purple_200" />
+
+    <TextView
+        android:id="@+id/textviewLoginOnToCoFlims"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewAvatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+
+        android:text="Log on to CoFlims for more"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonSignIn"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewLoginOnToCoFlims"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_button"
+        android:text="Sign in"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSignIn"
+        android:layout_marginTop="23dp"
+        android:text="or"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/or"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/or"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/or"
+
+        android:id="@+id/imageButtonFaceboookLogo"
+        android:background="@drawable/facebooklogo"
+
+
+        />
+
+    <ImageButton
+        android:id="@+id/imageButtonGoogleLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/or"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/googlelogo"
+
+         />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout2"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have and account?"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+
+        android:textSize="15dp"
+        android:id="@+id/textViewDontHaveAccount"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up?"
+        android:id="@+id/signUpTextView"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:textColor="@color/holoBlue"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/linearLayout2"
+
+
+        >
+
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButtonHome"
+            android:background="@drawable/ic_home"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+
+            />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButtonSearch"
+            android:background="@drawable/ic_search"
+            android:layout_marginRight="30dp"
+
+            />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButtonAdd"
+            android:background="@drawable/ic_add"
+            android:layout_marginRight="30dp"
+            />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButtonMessage"
+            android:background="@drawable/ic_message"
+            android:layout_marginRight="30dp"
+            />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButtonUser"
+            android:background="@drawable/user"
+            />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
