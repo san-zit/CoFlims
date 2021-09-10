@@ -3,6 +3,8 @@ package com.example.myapplication123;
 import android.app.Application;
 
 import com.parse.Parse;
+import com.parse.ParseInstallation;
+import com.parse.facebook.ParseFacebookUtils;
 
 public class App extends Application {
     @Override
@@ -13,5 +15,10 @@ public class App extends Application {
                 .clientKey(getString(R.string.back4app_client_key))
                 .server(getString(R.string.back4app_server_url))
                 .build());
+
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+        ParseFacebookUtils.initialize(this);
+
+
     }
 }

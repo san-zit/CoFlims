@@ -30,42 +30,6 @@
 
         />
 
-    <Button
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="20dp"
-        android:background="#4267B2"
-        android:text="Sign in with Facebook"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textAlignment="textStart"
-        android:id="@+id/buttonSignInWithFacebook"
-        android:drawableLeft="@mipmap/ic_facebooklogo_foreground"
-
-
-
-
-
-
-        />
-
-    <Button
-        android:id="@+id/buttonSignInWithGoogle"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="30dp"
-
-        android:text="Sign in with Google"
-        android:textAlignment="textStart"
-        android:textColor="@color/white"
-        android:background="#DB4437"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:drawableLeft="@mipmap/ic_googlelogo_foreground"
-        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

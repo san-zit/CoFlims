@@ -1,12 +1,15 @@
 package com.example.myapplication123;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -25,11 +28,15 @@ public class signUp extends AppCompatActivity {
     EditText password;
     ImageButton viewPsw;
     TextView signin;
+    ImageButton backArrowSignUp;
+
     Button signup;
+    CheckBox termsAndConditions;
+    TextView readTermsAndConditions;
     int count=1;
 
 
-    ImageButton backArrowSignUp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +50,20 @@ public class signUp extends AppCompatActivity {
         viewPsw=findViewById(R.id.viewPasswordImageButton);
         password=findViewById(R.id.editTextPassword);
         signin=findViewById(R.id.textViewSignIn);
+        termsAndConditions=findViewById(R.id.checkBoxTermAndConditions);
+        readTermsAndConditions=findViewById(R.id.textViewTermAndConditions);
+
+        readTermsAndConditions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(signUp.this, TermsAndConditions.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +106,7 @@ public class signUp extends AppCompatActivity {
         email=findViewById(R.id.editTextEmail);
         userName=findViewById(R.id.editTextUsername);
         password=findViewById(R.id.editTextPassword);
+        termsAndConditions=findViewById(R.id.checkBoxTermAndConditions);
 
 
 
@@ -96,7 +118,15 @@ public class signUp extends AppCompatActivity {
          {
              if(!password.getText().toString().trim().isEmpty() && password.getText().toString().trim().length()>=6)
              {
-                 return true;
+
+                 if(termsAndConditions.isChecked()) {
+                     return true;
+                 }
+                 else
+                 {
+                     showAlert("Terms and conditions","Please read and accept the terms and conditions.");
+                     return false;
+                 }
              }
              else {
                  password.setError("Invalid password! Must be 6 characters");
@@ -139,10 +169,17 @@ public class signUp extends AppCompatActivity {
                 @Override
                 public void done(ParseException e) {
                     if (e == null) {
-                        Toast.makeText(getApplicationContext(),"Signup successful!", Toast.LENGTH_LONG).show();
+
+                        showAlert("Signup sucessfull","Please verify the email before login");
+                        ParseUser.logOut();
+                        Intent intent=new Intent(signUp.this, signIn.class);
+                        startActivity(intent);
+
+                        //Toast.makeText(getApplicationContext(),"Signup successful!", Toast.LENGTH_LONG).show();
 
                     } else {
-                        Toast.makeText(getApplicationContext(),e.getMessage()+"Signup failed!", Toast.LENGTH_LONG).show();
+                        showAlert("Signup failed",e.getMessage());
+                        //Toast.makeText(getApplicationContext(),e.getMessage()+"Signup failed!", Toast.LENGTH_LONG).show();
                     }
                 }
             });
@@ -153,6 +190,20 @@ public class signUp extends AppCompatActivity {
 
         }
 
+    }
+
+    private void showAlert(String title, String message)
+    {
+
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.setTitle(title).setMessage(message).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+
+                dialog.dismiss();
+            }
+        }).show();
     }
 
 

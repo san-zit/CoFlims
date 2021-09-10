@@ -4,102 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Inbox">
+    tools:context=".Inbox"
+    android:layout_gravity="center"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Inbox"
-        android:layout_marginTop="10dp"
-        android:id="@+id/inboxTextView"
-        />
-
-
-
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/inboxTextView"
-        android:id="@+id/tabs"
-        >
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Messages"
-            android:id="@+id/messageTab"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Notifications"
-            android:id="@+id/notificationTab"
-            />
+   <ImageButton
+       android:layout_width="50dp"
+       android:layout_height="40dp"
+       android:layout_marginTop="10dp"
+       android:background="@drawable/ic_goback"
+       android:backgroundTint="@color/black"
+       android:layout_marginLeft="10dp"
+       android:id="@+id/backArrowSignIn"
 
 
-    </com.google.android.material.tabs.TabLayout>
+       />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
-        android:layout_below="@id/tabs"
-        android:layout_marginBottom="13dp" />
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Inbox"
+       android:id="@+id/inboxtextview"
+       android:textSize="30sp"
+       android:layout_marginLeft="100dp"
+       android:textColor="@color/black"
 
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="4dp"
-        android:id="@+id/linearLayout"
-        >
+       android:layout_marginTop="10dp"
 
 
-        <ImageButton
-            android:id="@+id/imageButtonHome"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/ic_home"
-
-            />
-
-        <ImageButton
-            android:id="@+id/imageButtonSearch"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/ic_search" />
-
-        <ImageButton
-            android:id="@+id/imageButtonAdd"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/ic_add" />
-
-        <ImageButton
-            android:id="@+id/imageButtonMessage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/ic_message" />
-
-        <ImageButton
-            android:id="@+id/imageButtonUser"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/user" />
+       />
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:text="New Message"
+      android:layout_below="@+id/inboxtextview"
+       android:id="@+id/newMessage"
+       android:layout_marginTop="5dp"
+       android:background="@drawable/rounded_button"
+       android:textColor="@color/white"
+       android:textStyle="bold"
+       android:padding="5dp"
+      />
 
 
-    </LinearLayout>
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recycleView"
+       android:layout_width="match_parent"
+       android:layout_height="545dp"
+       android:layout_below="@+id/inboxtextview"
+       android:layout_marginTop="64dp"
+       android:background="@color/white">
 
+   </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

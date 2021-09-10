@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".manageAccountsSettings"
+    android:padding="8dp">
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_goback"
+        android:backgroundTint="@color/black"
+
+        android:id="@+id/backArrowEditProfile"
+
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/manageAccount"
+        android:text="Manage Account"
+        android:layout_marginTop="5dp"
+        android:textSize="25sp"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/phoneNumber"
+        android:inputType="phone"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/emailAddress"
+        android:inputType="textEmailAddress"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please verify your email before you login next time"
+        android:textSize="18sp"
+
+        android:textColor="@color/lightblue"
+        android:textStyle="bold"
+        android:visibility="invisible"
+
+        android:id="@+id/verifiedEmail"
+        />
+
+    <Button
+        android:id="@+id/buttonSaveChanges"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+
+
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_button"
+        android:text="Save changes"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete my account"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/red"
+        android:id="@+id/deleteMyAccount"
+        android:textStyle="bold"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Process can't be undone, You will lost you all data."
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/com_facebook_blue"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+
+
+</LinearLayout>

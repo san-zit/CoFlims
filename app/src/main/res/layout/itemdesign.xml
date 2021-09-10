@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@color/white">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:id="@+id/imageView"
+    app:cardCornerRadius="60dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/img_1"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView1">
+
+
+    </ImageView>
+
+</androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:text="Sanjit"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/textview">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="10:43am"
+
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/textview"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="75dp"
+            android:id="@+id/textviewtime">
+
+        </TextView>
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:text="How are you?am"
+
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_below="@id/textview"
+
+            android:layout_marginLeft="20dp"
+
+            android:id="@+id/textviewmessage">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="------------------------------------------------------------------------"
+
+            android:textSize="15sp"
+            android:textColor="#CDC7C7"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_below="@id/textviewmessage"
+            android:layout_marginTop="-5dp"
+
+            android:layout_marginLeft="20dp"
+
+            android:id="@+id/divider">
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

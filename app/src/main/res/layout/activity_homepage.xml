@@ -9,8 +9,9 @@
 
     >
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="CoFilms"
         android:textSize="30sp"
         android:id="@+id/coFilms"
@@ -21,42 +22,25 @@
 
         />
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_alignRight="@+id/coFilms"
-        android:layout_marginTop="10dp"
-        android:tooltipText="search"
-        android:contextClickable="true"
-
-
-
-        android:layout_marginRight="10dp"
-
-
-        android:background="@drawable/searchbox" />
-
     <ImageView
         android:id="@+id/imageViewAvatar"
         android:layout_width="379dp"
         android:layout_height="264dp"
-        android:layout_below="@id/searchView"
+        android:layout_below="@id/coFilms"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
-
-
-        app:srcCompat="@color/purple_200" />
+        android:background="@drawable/coflimslogo"
+/>
 
     <TextView
         android:id="@+id/textviewLoginOnToCoFlims"
-        android:layout_width="380dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageViewAvatar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
 
-        android:text="Log on to CoFlims for more"
+        android:text="Welcome to CoFilms"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -148,61 +132,7 @@
         />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/linearLayout2"
 
-
-        >
-
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/imageButtonHome"
-            android:background="@drawable/ic_home"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="20dp"
-
-            />
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/imageButtonSearch"
-            android:background="@drawable/ic_search"
-            android:layout_marginRight="30dp"
-
-            />
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/imageButtonAdd"
-            android:background="@drawable/ic_add"
-            android:layout_marginRight="30dp"
-            />
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/imageButtonMessage"
-            android:background="@drawable/ic_message"
-            android:layout_marginRight="30dp"
-            />
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/imageButtonUser"
-            android:background="@drawable/user"
-            />
-
-
-    </LinearLayout>
 
 
 
